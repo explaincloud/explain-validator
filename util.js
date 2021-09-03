@@ -27,7 +27,7 @@ module.exports = class util {
 				if (schema.properties) {
 					for (var prop in schema.properties) {
 						if (newData[prop]) {
-							newData[prop] = parseData({
+							newData[prop] = this.parseData({
 								data: newData[prop],
 								schema: schema.properties[prop],
 								name: `${name}.${prop}`
@@ -52,7 +52,7 @@ module.exports = class util {
 				}
 				if (schema.items) {
 					newData = newData.map((item, index) => {
-						return parseData({
+						return this.parseData({
 							data: item,
 							schema: schema.items,
 							name: `${name}[${index}]`
