@@ -1,6 +1,6 @@
 {
   "name": "explain-validator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "JSON Schema数据校验器",
   "main": "index.js",
   "scripts": {
